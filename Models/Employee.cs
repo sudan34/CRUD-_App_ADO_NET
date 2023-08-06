@@ -27,7 +27,7 @@ namespace CRUD__App_ADO_NET.Models
         [NotMapped]
         public string FullName
         {
-            get { return FirstName + "" + LastName; }
+            get { return FirstName + " " + LastName; }
         }
     }
 }

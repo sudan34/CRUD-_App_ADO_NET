@@ -23,7 +23,7 @@ else if (!string.IsNullOrWhiteSpace(successMessage))
     </div>
 }
 <form>
-    <button asp-action="Create" asp-asp-controller="Employee" class="btn btn-primary mb-3">Create Employee</button>
+    <button asp-action="Create" asp-controller="Employee" class="btn btn-primary mb-3">Create Employee</button>
     <table class="table table-responsive table-bordered table-hover">
         <thead>
             <tr class="table-active">
@@ -43,13 +43,13 @@ else if (!string.IsNullOrWhiteSpace(successMessage))
                     <tr>
                         <td>@employee.Id</td>
                         <td>@employee.FullName</td>
-                        <td>@employee.DateOfBirth.ToString("dd/mm/yyyy")</td>
+                        <td>@employee.DateOfBirth.ToString("dd/MM/yyyy")</td>
                         <td>@employee.Email</td>
                         <td>@employee.Salary</td>
                         <td>
                             <div class="btn-group btn-group-sm">
-                                <a asp-asp-controller="Employee" asp-action="Edit" asp-rout-id="@employee.Id" class="btn btn-primary">Edit</a>
-                                <a asp-asp-controller="Employee" asp-action="Delete" asp-rout-id="@employee.Id" class="btn btn-danger">Edit</a>
+                                <a asp-action="Edit" asp-route-id="@employee.Id" class="btn btn-primary">Edit</a>  | 
+                                <a asp-action="Delete" asp-route-id="@employee.Id" class="btn btn-danger">Delete</a>
                             </div>
                         </td>
                     </tr>
